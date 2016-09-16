@@ -13,7 +13,7 @@ class Parish(models.Model):
   def __str__(self):
     return "{}: {}".format(self.id, self.name)
 
-class ComapnyInfo(models.Model):
+class CompanyInfo(models.Model):
   company_name = models.CharField(max_length=55)
   owner = models.CharField(max_length=55)
   company_id = models.CharField(max_length=55)

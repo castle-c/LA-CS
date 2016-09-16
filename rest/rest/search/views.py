@@ -13,9 +13,9 @@ from search.serializers import *
 
 
 class ParishList(viewsets.ModelViewSet):
-    model = Animal
-    queryset = Animal.objects.all()
-    serializer_class = AnimalSerializer
+    model = Parish
+    queryset = Parish.objects.all()
+    serializer_class = ParishSerializer
 
 
 
@@ -26,16 +26,16 @@ class UserList(viewsets.ModelViewSet):
 
 
 class CompanyInfoList(viewsets.ModelViewSet):
-    model = Ticket
-    queryset = Ticket.objects.all()
-    serializer_class = TicketSerializer
+    model = CompanyInfo
+    queryset = CompanyInfo.objects.all()
+    serializer_class = CompanyInfoSerializer
 
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
-class CompanyByParish(viewsets.ModelViewSet):
-    queryset = Habitat.objects.all()
-    serializer_class = HabitatSerializer
+class CompaniesByParish(viewsets.ModelViewSet):
+    queryset = CompaniesByParish.objects.all()
+    serializer_class = CompaniesByParishSerializer
 
 
 
