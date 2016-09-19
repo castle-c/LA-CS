@@ -8,7 +8,7 @@ from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from search.models import Parish, CompanyInfo, CompanyByParish
+from search.models import Parish, CompanyInfo, CompaniesByParish
 from search.serializers import *
 
 
@@ -33,7 +33,7 @@ class CompanyInfoList(viewsets.ModelViewSet):
     # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
-class CompaniesByParish(viewsets.ModelViewSet):
+class CompaniesByParishList(viewsets.ModelViewSet):
     queryset = CompaniesByParish.objects.all()
     serializer_class = CompaniesByParishSerializer
 

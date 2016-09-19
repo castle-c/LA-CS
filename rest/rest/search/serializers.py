@@ -35,7 +35,7 @@ class CompaniesByParishSerializer(serializers.HyperlinkedModelSerializer):
 
   class Meta:
     model = CompaniesByParish
-    fields = ('id', 'url', 'city', 'company_name', 'sate', 'parish_key', 'company_key')
+    fields = ('id', 'url', 'city', 'company_name', 'state', 'parish_key', 'company_key')
 
 
 

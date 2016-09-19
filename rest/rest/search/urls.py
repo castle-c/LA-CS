@@ -1,4 +1,4 @@
-rfrom rest_framework import routers
+from rest_framework import routers
 from django.conf.urls import url, include
 from search import views
 
@@ -11,6 +11,5 @@ router.register(r'companies', views.CompaniesByParishList)
 router.register(r'users', views.UserList)
 
 urlpatterns = [
-    url(r'^login$', views.login_user, name='login'),
     url(r'^', include(router.urls)),
 ]

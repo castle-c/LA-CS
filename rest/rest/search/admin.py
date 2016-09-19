@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Parish, CompanyInfo, CompaniesByParish
 
-# Register your models here.
+admin.site.register(Parish)
+admin.site.register(CompanyInfo)
+admin.site.register(CompaniesByParish)
