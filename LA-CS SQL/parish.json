@@ -1,0 +1,276 @@
+{
+  "results": [
+    {
+      "id": "11164",
+      "name": "Plaquemines Parish"
+    },
+    {
+      "id": "11145",
+      "name": "East Feliciana Parish"
+    },
+    {
+      "id": "1067",
+      "name": "OUT-OF-STATE"
+    },
+    {
+      "id": "11152",
+      "name": "Jefferson Davis Parish"
+    },
+    {
+      "id": "11184",
+      "name": "Vernon Parish"
+    },
+    {
+      "id": "11186",
+      "name": "Webster Parish"
+    },
+    {
+      "id": "11180",
+      "name": "Tensas Parish"
+    },
+    {
+      "id": "11142",
+      "name": "De Soto Parish"
+    },
+    {
+      "id": "11139",
+      "name": "Catahoula Parish"
+    },
+    {
+      "id": "11159",
+      "name": "Madison Parish"
+    },
+    {
+      "id": "11151",
+      "name": "Jackson Parish"
+    },
+    {
+      "id": "11188",
+      "name": "West Carroll Parish"
+    },
+    {
+      "id": "11136",
+      "name": "Calcasieu Parish"
+    },
+    {
+      "id": "11189",
+      "name": "West Feliciana Parish"
+    },
+    {
+      "id": "11170",
+      "name": "St. Bernard Parish"
+    },
+    {
+      "id": "11129",
+      "name": "Ascension Parish"
+    },
+    {
+      "id": "11153",
+      "name": "Jefferson Parish"
+    },
+    {
+      "id": "11130",
+      "name": "Assumption Parish"
+    },
+    {
+      "id": "11146",
+      "name": "Evangeline Parish"
+    },
+    {
+      "id": "11166",
+      "name": "Rapides Parish"
+    },
+    {
+      "id": "11156",
+      "name": "Lafourche Parish"
+    },
+    {
+      "id": "11149",
+      "name": "Iberia Parish"
+    },
+    {
+      "id": "11161",
+      "name": "Natchitoches Parish"
+    },
+    {
+      "id": "11181",
+      "name": "Terrebonne Parish"
+    },
+    {
+      "id": "11163",
+      "name": "Ouachita Parish"
+    },
+    {
+      "id": "11162",
+      "name": "Orleans Parish"
+    },
+    {
+      "id": "11177",
+      "name": "St. Mary Parish"
+    },
+    {
+      "id": "11134",
+      "name": "Bossier Parish"
+    },
+    {
+      "id": "11132",
+      "name": "Beauregard Parish"
+    },
+    {
+      "id": "11157",
+      "name": "Lincoln Parish"
+    },
+    {
+      "id": "11158",
+      "name": "Livingston Parish"
+    },
+    {
+      "id": "11179",
+      "name": "Tangipahoa Parish"
+    },
+    {
+      "id": "11182",
+      "name": "Union Parish"
+    },
+    {
+      "id": "11168",
+      "name": "Richland Parish"
+    },
+    {
+      "id": "11165",
+      "name": "Pointe Coupee Parish"
+    },
+    {
+      "id": "11174",
+      "name": "St. John the Baptist Parish"
+    },
+    {
+      "id": "11185",
+      "name": "Washington Parish"
+    },
+    {
+      "id": "11137",
+      "name": "Caldwell Parish"
+    },
+    {
+      "id": "11150",
+      "name": "Iberville Parish"
+    },
+    {
+      "id": "11135",
+      "name": "Caddo Parish"
+    },
+    {
+      "id": "11160",
+      "name": "Morehouse Parish"
+    },
+    {
+      "id": "11178",
+      "name": "St. Tammany Parish"
+    },
+    {
+      "id": "11172",
+      "name": "St. Helena Parish"
+    },
+    {
+      "id": "11128",
+      "name": "Allen Parish"
+    },
+    {
+      "id": "11173",
+      "name": "St. James Parish"
+    },
+    {
+      "id": "11155",
+      "name": "Lafayette Parish"
+    },
+    {
+      "id": "11176",
+      "name": "St. Martin Parish"
+    },
+    {
+      "id": "11147",
+      "name": "Franklin Parish"
+    },
+    {
+      "id": "11187",
+      "name": "West Baton Rouge Parish"
+    },
+    {
+      "id": "1017",
+      "name": "E. Baton Rouge"
+    },
+    {
+      "id": "11127",
+      "name": "Acadia Parish"
+    },
+    {
+      "id": "11167",
+      "name": "Red River Parish"
+    },
+    {
+      "id": "11133",
+      "name": "Bienville Parish"
+    },
+    {
+      "id": "11138",
+      "name": "Cameron Parish"
+    },
+    {
+      "id": "11190",
+      "name": "Winn Parish"
+    },
+    {
+      "id": "11171",
+      "name": "St. Charles Parish"
+    },
+    {
+      "id": "11169",
+      "name": "Sabine Parish"
+    },
+    {
+      "id": "11144",
+      "name": "East Carroll Parish"
+    },
+    {
+      "id": "1030",
+      "name": "Lasalle"
+    },
+    {
+      "id": "11141",
+      "name": "Concordia Parish"
+    },
+    {
+      "id": "11143",
+      "name": "East Baton Rouge Parish"
+    },
+    {
+      "id": "11140",
+      "name": "Claiborne Parish"
+    },
+    {
+      "id": "1048",
+      "name": "St. John"
+    },
+    {
+      "id": "11148",
+      "name": "Grant Parish"
+    },
+    {
+      "id": "11175",
+      "name": "St. Landry Parish"
+    },
+    {
+      "id": "11183",
+      "name": "Vermilion Parish"
+    },
+    {
+      "id": "11131",
+      "name": "Avoyelles Parish"
+    },
+    {
+      "id": "11154",
+      "name": "La Salle Parish"
+    }
+  ]
+}
