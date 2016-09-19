@@ -1,2 +1,7 @@
 <h1>{{title}}</h1>
 
+<ul>
+  <li ng-repeat="(key, resource) in apiRoot">
+    <a ng-href="/#/{{ key }}">{{ key }}</a>
+  </li>
+</ul>

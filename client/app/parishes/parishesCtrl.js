@@ -1,24 +1,24 @@
 'use strict'
 
 angular.module("LACS")
-  .controller('CompaniesCtrl', [
+  .controller('ParishesCtrl', [
     '$scope',
     '$http',
     'RootFactory',
     '$timeout',
     function ($scope, $http, RootFactory, $timeout) {
-      $scope.title = "companies"
+      $scope.title = "parishes"
       $scope.apiRoot = null;
 
       RootFactory.getApiRoot()
           .then(
             root => {
               $scope.apiRoot = root;
-              $http.get(`${root.companies}`)
+              $http.get(`${root.parishes}`)
                 .then(
                   res => {
-                    $scope.companies = res.data
-                    console.log("companies", $scope.companies);
+                    $scope.parishes = res.data
+                    console.log("parishes", $scope.parishes);
                 });
               $timeout();
             },
