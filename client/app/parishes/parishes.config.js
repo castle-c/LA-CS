@@ -7,4 +7,10 @@ angular.module('LACS')
         controller: 'ParishesCtrl',
         templateUrl: '/app/parishes/parishes.html'
       })
-    });
+      .when('/parishes/:parishId', {
+        controller: 'ParishDetailCtrl',
+        templateUrl: '/app/parishes/parishDetail.html'
+      })
+
+});
+

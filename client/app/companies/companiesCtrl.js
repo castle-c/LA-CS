@@ -1,27 +1,17 @@
-'use strict'
+angular.module('LACS')
 
-angular.module("LACS")
-  .controller('CompaniesCtrl', [
+.controller('CompaniesCtrl', [
     '$scope',
     '$http',
-    'RootFactory',
     '$timeout',
-    function ($scope, $http, RootFactory, $timeout) {
-      $scope.title = "companies"
-      $scope.apiRoot = null;
 
-      RootFactory.getApiRoot()
-          .then(
-            root => {
-              $scope.apiRoot = root;
-              $http.get(`${root.companies}`)
-                .then(
-                  res => {
-                    $scope.companies = res.data
-                    console.log("companies", $scope.companies);
-                });
-              $timeout();
-            },
-            err => console.log("error", err)
-          )
-        }])
+  function ($scope, $http, RootFactory, $timeout) {
+    let logError = err => console.log("error", err)
+
+    $http.get("http://localhost:8000/companies")
+         .then((res) => { $scope.companies = res.data
+          // console.log(res.data)
+          logError
+  })
+
+  }])

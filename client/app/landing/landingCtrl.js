@@ -1,27 +1,19 @@
-'use strict'
 
-angular.module("LACS")
-  .controller('LandingCtrl', [
+app.controller('LandingCtrl', [
     '$scope',
     '$http',
-    'RootFactory',
     '$timeout',
-    function ($scope, $http, RootFactory, $timeout) {
-      $scope.title = "landing"
-      $scope.apiRoot = null;
+    '$routeParams',
 
-      RootFactory.getApiRoot()
-            .then(
-              root => {
-                $scope.apiRoot = root;
-                $http.get(`${root.parishes}`)
-                  .then(
-                    res => {
-                      $scope.parishes = res.data
-                      console.log("parishes", $scope.parishes);
-                  });
-                $timeout();
-              },
-              err => console.log("error", err)
-            )
-          }])
+  function ($scope, $http, $timeout) {
+    let logError = err => console.log("error", err)
+
+
+    $http.get("http://localhost:8000/parishes")
+         .then((res) => { $scope.parishes = res.data
+          // console.log('freferfrefe', $scope.parishes)
+          logError
+       })
+       }])
+
+

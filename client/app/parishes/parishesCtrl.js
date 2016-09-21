@@ -1,27 +1,20 @@
-'use strict'
+angular.module('LACS')
 
-angular.module("LACS")
-  .controller('ParishesCtrl', [
+.controller('ParishesCtrl', [
     '$scope',
     '$http',
-    'RootFactory',
     '$timeout',
-    function ($scope, $http, RootFactory, $timeout) {
-      $scope.title = "parishes"
-      $scope.apiRoot = null;
 
-      RootFactory.getApiRoot()
-          .then(
-            root => {
-              $scope.apiRoot = root;
-              $http.get(`${root.parishes}`)
-                .then(
-                  res => {
-                    $scope.parishes = res.data
-                    console.log("parishes", $scope.parishes);
-                });
-              $timeout();
-            },
-            err => console.log("error", err)
-          )
-        }])
+  function ($scope, $http, RootFactory, $timeout) {
+    let logError = err => console.log("error", err)
+
+
+    $http.get("http://localhost:8000/parishes")
+     .then((res) => { $scope.parishes = res.data
+          // console.log($scope.parishes)
+          logError
+     })
+}])
+
+
+
