@@ -11,5 +11,7 @@ router.register(r'companies', views.CompaniesByParishList)
 router.register(r'users', views.UserList)
 
 urlpatterns = [
+    url(r'^login$', views.login_user, name='login'),
+      url(r'^register$', views.register_user, name='register'),
     url(r'^', include(router.urls)),
 ]

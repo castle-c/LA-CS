@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from search.models import CompanyInfo, Parish, CompaniesByParish
+from search.models import *
 
 # Using the HyperlinkedModelSerializer will examine the relationships
 # between the models, and the data, and provide a hyperlink to the
@@ -26,7 +26,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'url', 'username')
+        fields = ('id', 'url', 'username', 'password')
 
 
 class CompaniesByParishSerializer(serializers.HyperlinkedModelSerializer):

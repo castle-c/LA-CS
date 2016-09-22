@@ -1,6 +1,8 @@
-
 from django.db import models
-
+from django.utils import timezone
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.contrib.auth.models import User
 
 
 class Parish(models.Model):
@@ -23,7 +25,7 @@ class Parish(models.Model):
 class CompanyInfo(models.Model):
   company_name = models.CharField(max_length=55)
   owner = models.CharField(max_length=55)
-  company_id = models.CharField(max_length=55)
+  company_id = None
   email = models.CharField(max_length=55)
   address = models.CharField(max_length=55)
   city = models.CharField(max_length=55)

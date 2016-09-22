@@ -1,0 +1,10 @@
+
+<div ng-repeat="companies in parishKeyList | filter : test">
+
+
+    <h1><a href = "#/companies/{{companies.id}}">{{companies.company_name}}</a></h1>
+
+    <p>{{ companies.city }}</p>
+
+  </div>
+</div>

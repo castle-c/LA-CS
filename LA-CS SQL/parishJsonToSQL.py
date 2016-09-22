@@ -6,7 +6,6 @@ import requests
 parish_table = """ CREATE TABLE IF NOT EXISTS Parish (
                                       id integer PRIMARY KEY,
                                       parish_name text,
-                                      parish_id integer
                                   ); """
 
 
@@ -16,7 +15,6 @@ companies_by_parish_table = """ CREATE TABLE IF NOT EXISTS CompaniesByParish (
                                       company_name text,
                                       state text,
                                       parish_key,
-                                      company_key,
                                       FOREIGN KEY(parish_key) REFERENCES Parish(id),
                                       FOREIGN KEY(company_key) REFERENCES CompanyInfo(id)
                                   ); """
@@ -39,9 +37,9 @@ for obj in traffic['results']:
 
     c.execute("""
                 insert into Parish (parish_name, parish_id)
-                values (?, ?)
+                values (?)
               """,
-                (parish_name, parish_id))
+                (parish_name))
 
     r = requests.get("http://www.lslbc.louisiana.gov/wp-admin/admin-ajax.php?api_action=advanced&contractor_parish=" + company_id_list + "&action=api_actions")
     company = r.json()
