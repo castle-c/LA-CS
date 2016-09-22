@@ -8,7 +8,6 @@ sql_table = """ CREATE TABLE IF NOT EXISTS CompanyInfo (
                                       company_name text,
                                       owner text,
                                       email text,
-                                      company_id integer,
                                       address text,
                                       city text,
                                       state text,
@@ -53,8 +52,8 @@ for obj in traffic['results']:
 
 
     c.execute("""
-                insert into CompanyInfo (company_name, owner, email, company_id, address, city, state, zipcode, phone)
-                values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                insert into CompanyInfo (company_name, owner, email, address, city, state, zipcode, phone)
+                values (?, ?, ?, ?, ?, ?, ?, ?)
               """,
                 (name, qual_party, email, companyID, address, city, state, zipcode, phone))
     conn.commit()

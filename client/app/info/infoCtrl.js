@@ -2,7 +2,8 @@ app.controller('InfoCtrl', [
     '$scope',
     '$http',
     '$timeout',
-    function($scope, $http, $timeout) {
+    '$location',
+    function($scope, $http, $timeout, $location) {
         let logError = err => console.log("error", err)
         let info = null
         $scope.companyKey = ''
@@ -18,9 +19,8 @@ app.controller('InfoCtrl', [
                    .then(() => {
                     $scope.parishFormData.company_key = $scope.companyKey.url;
                     $http.post("http://localhost:8000/companies/", $scope.parishFormData)
-                    .success((res) => console.log(res))
-                    .error(logError)
-
+                    .success(() => { $location.path('companies/'+$scope.companyKey.id)
+                  })
                   })
               }
 
