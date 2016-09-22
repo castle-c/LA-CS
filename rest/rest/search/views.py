@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import logout, login, authenticate
 from django.http import HttpResponse
+from django.core import serializers
+from django.core.serializers import serialize
 from django.views.decorators.csrf import csrf_exempt
 import json
 from rest_framework import permissions
@@ -8,7 +10,10 @@ from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+from rest_framework import generics
+from rest_framework import filters
 from search.models import Parish, CompanyInfo, CompaniesByParish
+from django.views.generic import ListView
 from search.serializers import *
 
 
@@ -39,10 +44,11 @@ class CompaniesByParishList(viewsets.ModelViewSet):
 
 
 
+
+
 @csrf_exempt
 def register_user(request):
     '''Handles the creation of a new user for authentication
-
     Method arguments:
       request -- The full HTTP request object
     '''
@@ -55,13 +61,7 @@ def register_user(request):
     new_user = User.objects.create_user(
                     username=req_body['username'],
                     password=req_body['password'],
-                    email=req_body['email'],
-                    first_name=req_body['first_name'],
-                    last_name=req_body['last_name'],
                     )
-
-    new_user.visitor.age = req_body['age']
-    new_user.visitor.gender = req_body['gender']
 
     # Commit the user to the database by saving it
     new_user.save()
@@ -71,7 +71,6 @@ def register_user(request):
 @csrf_exempt
 def login_user(request):
     '''Handles the creation of a new user for authentication
-
     Method arguments:
       request -- The full HTTP request object
     '''
@@ -91,11 +90,9 @@ def login_user(request):
         login(request=request, user=authenticated_user)
 
         # Convert the authenticate user to a JSON object and send back in the reponse
-        data = serializers.serialize('json', (authenticated_user,), fields=('username', 'first_name', 'last_name', 'email'))
+        data = serialize('json', (authenticated_user,), fields=('username'))
     else:
         success = False
         data = json.dumps(None)  # Send back null if user does not exist
 
     return HttpResponse(data, content_type='application/json')
-
-
