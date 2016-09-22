@@ -27,11 +27,11 @@ app.controller('CompanyDetailCtrl', [
                     $scope.companyKeyList.push(data);
                     // console.log(data)
                   }
+                  $timeout()
                 }
-
+                   logError
               });
             })
 
-            logError
 
   }])
