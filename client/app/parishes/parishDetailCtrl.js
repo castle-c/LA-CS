@@ -1,7 +1,6 @@
 'use strict'
 
-angular.module("LACS")
-.controller('ParishDetailCtrl', [
+app.controller('ParishDetailCtrl', [
     '$scope',
     '$http',
     '$timeout',
@@ -20,9 +19,9 @@ angular.module("LACS")
             .then(() => {
               $http.get("http://localhost:8000/companies")
               .then((res) => {
-                // console.log(res.data) --json
                 for (let d in res.data) {
                   let data = res.data[d];
+                  // console.log(data)
                   if (data.parish_key === $scope.parish.url) {
                     $scope.parishKeyList.push(data);
                 // console.log(data)

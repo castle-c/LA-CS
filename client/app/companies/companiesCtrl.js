@@ -1,6 +1,5 @@
-angular.module('LACS')
 
-.controller('CompaniesCtrl', [
+app.controller('CompaniesCtrl', [
     '$scope',
     '$http',
     '$timeout',

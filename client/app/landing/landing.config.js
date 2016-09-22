@@ -1,5 +1,5 @@
-angular.module("LACS")
-  .config(($routeProvider) => {
+
+  app.config(($routeProvider) => {
     $routeProvider
       .when("/", {
         controller: "LandingCtrl",

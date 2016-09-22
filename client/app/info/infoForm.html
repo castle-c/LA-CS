@@ -1,0 +1,56 @@
+<form ng-submit ="processForm();">
+  <div id="" class="form-group">
+    <label>address</label>
+    <input type="text" name="address" class="form-control" placeholder="" ng-model="formData.address">
+  </div>
+  <div id="" class="form-group">
+    <label>city</label>
+    <input type="text" name="city" class="form-control" placeholder="" ng-model="formData.city" ng-change="parishFormData.city=formData.city"/>
+  </div>
+  <!-- <div id="" class="form-group"> -->
+  <!-- <label>companyID</label> -->
+  <!-- <input type="text" name="id" class="form-control" placeholder="" ng-model="formData.company_id"> -->
+  <!--   </div> -->
+  <div id="" class="form-group">
+    <label>company</label>
+    <input type="text" name="name" class="form-control" placeholder="" ng-model="formData.company_name" ng-change="parishFormData.company_name=formData.company_name"/>
+  </div>
+  <div id="" class="form-group">
+    <label>email</label>
+    <input type="text" name="email" class="form-control" placeholder="" ng-model="formData.email">
+  </div>
+  <div id="" class="form-group">
+    <label>owner</label>
+    <input type="text" name="owner" class="form-control" placeholder="" ng-model="formData.owner">
+  </div>
+  <div id="" class="form-group">
+    <label>phone</label>
+    <input type="text" name="phone" class="form-control" placeholder="" ng-model="formData.phone">
+  </div>
+  <div id="" class="form-group">
+    <label>state</label>
+    <input type="text" name="state" class="form-control" placeholder="" ng-model="formData.state" ng-change="parishFormData.state=formData.state"/>
+  </div>
+  <div id="" class="form-group">
+    <label>zipcode</label>
+    <input type="text" name="zipcode" class="form-control" placeholder="" ng-model="formData.zipcode">
+  </div>
+
+  <div id="" class="form-group">
+  <label>parish</label>
+    <select class="select" name="parish" id="parish" ng-init="getParish()" ng-model="parishFormData.parish_key">
+      <option ng-repeat="parish in parishes" value="{{parish.url}}">{{parish.parish_name}}</option>
+    </select>
+  </div>
+
+  <!-- SUBMIT BUTTON -->
+  <button type="submit" class="btn btn-success btn-lg btn-block">
+  <span class="glyphicon glyphicon-flash"></span> Submit!
+  </button>
+</form>
+<!-- SHOW DATA FROM INPUTS AS THEY ARE BEING TYPED -->
+<pre>
+    {{ formData }}
+    {{ parishFormData }}
+</pre>
+

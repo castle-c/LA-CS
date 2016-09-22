@@ -1,7 +1,6 @@
 'use strict'
 
-angular.module("LACS")
-.controller('CompanyDetailCtrl', [
+app.controller('CompanyDetailCtrl', [
     '$scope',
     '$http',
     '$timeout',
@@ -23,7 +22,7 @@ angular.module("LACS")
                 for (let d in res.data) {
                   let data = res.data[d];
                   // console.log(data.url)
-                  // console.log($scope.company.company_key)
+                  // console.log($scope.company)
                   if (data.url === $scope.company.company_key) {
                     $scope.companyKeyList.push(data);
                     // console.log(data)
