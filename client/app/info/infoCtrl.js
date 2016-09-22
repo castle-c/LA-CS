@@ -14,11 +14,11 @@ app.controller('InfoCtrl', [
 
         $scope.processForm = function() {
 
-            $http.post("http://localhost:8000/info/", $scope.formData)
+            $http.post("http://45.55.254.212:8000/info/", $scope.formData)
               .then(res =>  $scope.companyKey = res.data)
                    .then(() => {
                     $scope.parishFormData.company_key = $scope.companyKey.url;
-                    $http.post("http://localhost:8000/companies/", $scope.parishFormData)
+                    $http.post("http://45.55.254.212:8000/companies/", $scope.parishFormData)
                     .success(() => { $location.path('companies/'+$scope.companyKey.id)
                   })
                   })
@@ -26,14 +26,14 @@ app.controller('InfoCtrl', [
 
 
         $scope.getParish = function() {
-            $http.get("http://localhost:8000/parishes")
+            $http.get("http://45.55.254.212:8000/parishes")
             .then((res) => { $scope.parishes = res.data
               // console.log($scope.parishes)
               logError
      })
    }
 
-        $http.get("http://localhost:8000/info")
+        $http.get("http://45.55.254.212:8000/info")
             .then((res) => {
                 $scope.info = res.data
                     // console.log('info', $scope.info)
