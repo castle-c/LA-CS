@@ -11,12 +11,12 @@ app.controller('CompanyDetailCtrl', [
 
       let logError = (err) => console.log("error", err);
 
-          $http.get(`http://45.55.254.212:8000/companies/${$routeParams.companyId}`)
+          $http.get(`http://localhost:8000/companies/${$routeParams.companyId}`)
 
             .then(res => $scope.company = res.data)
 
             .then(() => {
-              $http.get("http://45.55.254.212:8000/info")
+              $http.get("http://localhost:8000/info")
               .then((res) => {
                 // console.log(res.data)
                 for (let d in res.data) {

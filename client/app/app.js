@@ -1,5 +1,5 @@
 const app = angular.module('LACS', ['ngRoute', 'ngCookies'])
-app.constant('apiUrl', "http://45.55.254.212:8000")
+app.constant('apiUrl', "http://localhost:8000")
 
   app.factory('RootFactory', [
     "$http", "apiUrl",
